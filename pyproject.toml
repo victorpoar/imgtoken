@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "victorpoar-imgtoken"
+version = "0.1.0"
+description = "按图像尺寸与切块方式估算令牌消耗，标出超预算的输入"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [{ name = "victorpoar" }]
+keywords = ["cli", "analysis", "observability", "evaluation"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Utilities",
+]
+
+[project.urls]
+Homepage = "https://victorpoar.github.io"
+Repository = "https://github.com/victorpoar/imgtoken"
+Issues = "https://github.com/victorpoar/imgtoken/issues"
+
+[project.scripts]
+imgtoken = "imgtoken:main"
+
+[tool.setuptools]
+py-modules = ["imgtoken"]
